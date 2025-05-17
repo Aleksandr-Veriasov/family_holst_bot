@@ -1,10 +1,13 @@
 import pytest
 from telegram.ext import Application, CommandHandler, ConversationHandler
 
-from bot.handlers.registry import register_handlers
 from bot.handlers.calculator import (
-    CHOOSING_SIZE, CHOOSING_STYLE, CHOOSING_FACE_COUNT, CHOOSING_OPTIONS
+    CHOOSING_FACE_COUNT,
+    CHOOSING_OPTIONS,
+    CHOOSING_SIZE,
+    CHOOSING_STYLE,
 )
+from bot.handlers.registry import register_handlers
 
 
 def test_register_handlers_runs_without_error(app: Application) -> None:

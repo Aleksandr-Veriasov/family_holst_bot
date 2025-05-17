@@ -2,7 +2,7 @@ import logging
 from datetime import datetime, time
 
 import pytz
-from telegram import Update, Message
+from telegram import Message, Update
 from telegram.ext import ContextTypes, ConversationHandler
 
 from bot.config import ADMIN_ID

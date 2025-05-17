@@ -1,6 +1,6 @@
 import logging
 
-from telegram import Update, Message
+from telegram import Message, Update
 from telegram.ext import ContextTypes
 
 from bot.keyboards.main_menu import main_menu

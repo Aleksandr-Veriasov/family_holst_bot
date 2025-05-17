@@ -1,16 +1,17 @@
-import pytest
-from telegram import Update, Message
-from telegram.ext import ContextTypes, ConversationHandler
+from datetime import datetime
 from typing import cast
 from unittest.mock import AsyncMock, patch
-from datetime import datetime
+
+import pytest
 import pytz
+from telegram import Message, Update
+from telegram.ext import ContextTypes, ConversationHandler
 
 from bot.handlers.contact import (
-    request_contact,
     WAITING_FOR_MESSAGE,
     forward_to_manager,
-    is_within_working_hours
+    is_within_working_hours,
+    request_contact,
 )
 
 

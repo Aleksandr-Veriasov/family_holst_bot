@@ -1,13 +1,13 @@
 import logging
-
-from telegram import ReplyKeyboardRemove, Update, Message
-from telegram.ext import ContextTypes, ConversationHandler
 from typing import cast
 
-from bot.prices import AVAILABLE_SIZES, EXTRA_OPTIONS, STYLE_OPTIONS
+from telegram import Message, ReplyKeyboardRemove, Update
+from telegram.ext import ContextTypes, ConversationHandler
+
 from bot.keyboards.calculator import (
     option_keyboard, size_keyboard, style_keyboard
 )
+from bot.prices import AVAILABLE_SIZES, EXTRA_OPTIONS, STYLE_OPTIONS
 from bot.states import (
     CHOOSING_FACE_COUNT,
     CHOOSING_OPTIONS,
@@ -16,7 +16,6 @@ from bot.states import (
 )
 from bot.utils.calculator import format_summary
 from bot.utils.decorators import ensure_message
-
 
 logger = logging.getLogger(__name__)
 

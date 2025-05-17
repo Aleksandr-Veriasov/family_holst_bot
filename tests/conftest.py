@@ -1,8 +1,9 @@
-import pytest
-from telegram import Update, User, Message, Chat
-from telegram.ext import ContextTypes, Application
 from typing import cast
-from unittest.mock import AsyncMock, create_autospec, MagicMock
+from unittest.mock import AsyncMock, MagicMock, create_autospec
+
+import pytest
+from telegram import Chat, Message, Update, User
+from telegram.ext import Application, ContextTypes
 
 
 @pytest.fixture

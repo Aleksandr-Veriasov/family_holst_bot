@@ -1,7 +1,7 @@
 from telegram import ReplyKeyboardMarkup
+
 from bot.prices import AVAILABLE_SIZES, EXTRA_OPTIONS, STYLE_OPTIONS
 from bot.utils.helpers import chunked
-
 
 # Клавиатуры для выборо размеров
 size_keyboard = ReplyKeyboardMarkup(

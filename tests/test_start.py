@@ -1,8 +1,9 @@
-import pytest
-from telegram import Update, Message
-from telegram.ext import ContextTypes
 from typing import cast
 from unittest.mock import AsyncMock
+
+import pytest
+from telegram import Message, Update
+from telegram.ext import ContextTypes
 
 from bot.handlers.start import start_command
 from bot.keyboards.main_menu import main_menu

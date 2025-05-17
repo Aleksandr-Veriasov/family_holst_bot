@@ -1,12 +1,12 @@
 import logging
 
-from telegram import InputFile, Update, Message
+from telegram import InputFile, Message, Update
 from telegram.ext import ContextTypes, ConversationHandler
 
-from bot.prices import STYLE_OPTIONS
 from bot.config import IMAGE_DIR
-from bot.keyboards.examples import style_keyboard
 from bot.keyboards.common import main_menu_button
+from bot.keyboards.examples import style_keyboard
+from bot.prices import STYLE_OPTIONS
 from bot.utils.decorators import ensure_message
 
 logger = logging.getLogger(__name__)

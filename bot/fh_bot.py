@@ -1,9 +1,10 @@
-from telegram.ext import ApplicationBuilder
-from bot.config import TELEGRAM_TOKEN
-from bot.handlers.registry import register_handlers
 import logging
 import sys
 
+from telegram.ext import ApplicationBuilder
+
+from bot.config import TELEGRAM_TOKEN
+from bot.handlers.registry import register_handlers
 
 # Настройка логгирования
 logging.basicConfig(

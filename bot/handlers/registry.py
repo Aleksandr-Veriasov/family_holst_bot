@@ -1,7 +1,7 @@
 from telegram.ext import (
     CommandHandler,
-    MessageHandler,
     ConversationHandler,
+    MessageHandler,
     filters,
 )
 
@@ -16,19 +16,16 @@ from bot.handlers.calculator import (
     start_calculator,
     style_chosen,
 )
-
 from bot.handlers.contact import (
     WAITING_FOR_MESSAGE,
     forward_to_manager,
     request_contact,
 )
-
 from bot.handlers.examples import (
     CHOOSING_EXAMPLE_STYLE,
     send_example_images,
     show_example_styles,
 )
-
 from bot.handlers.start import start_command
 
 

@@ -1,15 +1,18 @@
-import pytest
-from telegram import Update, Message
-from telegram.ext import ContextTypes, ConversationHandler
-from typing import cast
-from unittest.mock import AsyncMock, patch, MagicMock, mock_open
 from pathlib import Path
+from typing import cast
+from unittest.mock import AsyncMock, MagicMock, mock_open, patch
+
+import pytest
+from telegram import Message, Update
+from telegram.ext import ContextTypes, ConversationHandler
 
 from bot.handlers.examples import (
-    show_example_styles, CHOOSING_EXAMPLE_STYLE, send_example_images
+    CHOOSING_EXAMPLE_STYLE,
+    send_example_images,
+    show_example_styles,
 )
-from bot.prices import STYLE_OPTIONS
 from bot.keyboards.examples import style_keyboard
+from bot.prices import STYLE_OPTIONS
 
 
 @pytest.mark.asyncio

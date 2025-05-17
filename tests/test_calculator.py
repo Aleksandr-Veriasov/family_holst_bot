@@ -1,26 +1,27 @@
-import pytest
-from bot.utils.calculator import calculate_total, format_summary
-from telegram import Update, Message
-from telegram.ext import ContextTypes, ConversationHandler
 from typing import cast
 from unittest.mock import AsyncMock
-from bot.states import (
-    CHOOSING_SIZE,
-    CHOOSING_STYLE,
-    CHOOSING_FACE_COUNT,
-    CHOOSING_OPTIONS,
-)
+
+import pytest
+from telegram import Message, Update
+from telegram.ext import ContextTypes, ConversationHandler
 
 from bot.handlers.calculator import (
-    start_calculator,
-    size_chosen,
-    style_chosen,
     face_count_chosen,
     options_chosen,
+    size_chosen,
+    start_calculator,
+    style_chosen,
 )
 from bot.keyboards.calculator import (
-    size_keyboard, style_keyboard, option_keyboard
+    option_keyboard, size_keyboard, style_keyboard
 )
+from bot.states import (
+    CHOOSING_FACE_COUNT,
+    CHOOSING_OPTIONS,
+    CHOOSING_SIZE,
+    CHOOSING_STYLE,
+)
+from bot.utils.calculator import calculate_total, format_summary
 
 
 @pytest.mark.parametrize(

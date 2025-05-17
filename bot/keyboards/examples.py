@@ -1,7 +1,7 @@
 from telegram import ReplyKeyboardMarkup
+
 from bot.prices import STYLE_OPTIONS
 from bot.utils.helpers import chunked
-
 
 # Клавиатура для выбора стиля дизайна
 style_keyboard = ReplyKeyboardMarkup(
