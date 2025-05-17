@@ -1,0 +1,16 @@
+[tool.isort]
+profile = "black"
+src_paths = ["bot"]
+known_first_party = ["bot"]
+
+[tool.mypy-pytz]
+ignore_missing_imports = true
+
+[tool.coverage.run]
+branch = true
+source = ["bot"]
+omit = ["tests/*", "venv/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
